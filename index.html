@@ -2,109 +2,218 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <title>Beranda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Website Afiqah</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            background-color: #f0f5ed;
+            background-image: url("images/background.svg");
+            background-repeat: repeat;
+            color: #505c50;
+            margin: 0;
+            padding: 30px 15px;
+            line-height: 1.7;
         }
 
         table {
-            border-radius: 10px;
-            overflow: hidden;
+            width: 800px;
+            max-width: 100%;
+            margin: auto;
+            background-color: #fffdfd;
+            border: none;
             border-spacing: 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(100, 130, 100, 0.15);
+        }
+
+        td {
+            border: none;
         }
 
         h1 {
-            letter-spacing: 2px;
-            padding: 10px;
+            font-size: 32px;
+            margin: 10px 0;
+            color: #4f7055;
+            letter-spacing: 1px;
         }
 
         h3 {
-            color: #367c80;
-            font-size: 22px;
+            color: #65866a;
+            font-size: 21px;
+            margin-top: 10px;
+            margin-bottom: 8px;
         }
 
-        a {
-            color: #28777a;
+        /* Header */
+        .header {
+            background-color: #f8dce5;
+            background-image: url("images/jaring-teal.svg");
+            background-size: cover;
+            background-position: center;
+            padding: 25px;
+        }
+
+        .header p {
+            margin: 0;
+        }
+
+        /* Navigasi */
+        .navbar {
+            background-color: #dce9d7;
+            text-align: center;
+            padding: 16px;
+        }
+
+        .navbar a {
+            color: #4f7055;
             text-decoration: none;
+            font-weight: bold;
+            margin: 0 8px;
+            display: inline-block;
+        }
+
+        .navbar a:hover {
+            color: #d47797;
+        }
+
+        /* Isi berita */
+        .content {
+            padding: 25px;
+            vertical-align: top;
+        }
+
+        .date {
+            text-align: right;
+            color: #99918f;
+            font-size: 13px;
+        }
+
+        .read-more {
+            display: inline-block;
+            background-color: #f8dce5;
+            color: #86576a;
+            padding: 7px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
             font-weight: bold;
         }
 
-        a:hover {
-            color: #d65f91;
-            text-decoration: underline;
+        .read-more:hover {
+            background-color: #dce9d7;
+            color: #4f7055;
         }
 
         hr {
             border: none;
-            border-top: 1px solid #dddddd;
+            border-top: 1px solid #e7e8df;
             margin: 25px 0;
         }
 
-        tr:nth-child(2) td {
-            padding: 12px;
-        }
-
-        tr:nth-child(3) td {
-            padding: 18px;
+        /* Sidebar */
+        .sidebar {
+            width: 25%;
+            background-color: #f5f7f0;
+            padding: 20px;
             vertical-align: top;
         }
 
-        tr:nth-child(3) td:last-child {
-            background-color: #f1f3f3;
+        .sidebar h4 {
+            color: #65866a;
+            font-size: 16px;
+            margin-top: 0;
         }
 
-        tr:last-child td {
-            background-color: #367c80;
-            padding: 12px;
+        .sidebar ol {
+            padding-left: 20px;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: #718c70;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            color: #d47797;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #91ad8d;
             color: white;
+            text-align: center;
+            padding: 15px;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
+        .footer small {
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 12px 6px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            .content,
+            .sidebar {
+                padding: 12px;
+            }
+
+            .navbar a {
+                margin: 4px;
+            }
         }
     </style>
 </head>
 
-<body bgcolor="darkgrey" background="images/background.svg">
+<body>
 
-    <p>&nbsp;</p>
+    <table cellpadding="0">
 
-    <table border="1" width="800px" cellpadding="12px"
-           align="center" bgcolor="white">
-
+        <!-- Header -->
         <tr>
-            <td colspan="2" align="center"
-                bgcolor="pink" background="images/jaring-teal.svg">
-                <font color="black">
-                    <p>&nbsp;</p>
-                    <h1>Website Afiqah</h1>
-                </font>
+            <td colspan="2" class="header" align="center">
+                <h1>Website Afiqah</h1>
+                <p>✿ Stories, News & School Life ✿</p>
             </td>
         </tr>
 
+        <!-- Navigasi -->
         <tr>
-            <td colspan="2" bgcolor="pink">
-                <a href="index.html">Beranda</a> |
-                <a href="tentang-saya.html">Tentang Saya</a> |
-                <a href="sekolah-ku.html">Sekolahku</a> |
+            <td colspan="2" class="navbar">
+                <a href="index.html">Beranda</a>
+                <a href="tentang-saya.html">Tentang Saya</a>
+                <a href="sekolah-ku.html">Sekolahku</a>
                 <a href="syair-lagu.html">Syair Lagu</a>
             </td>
         </tr>
 
+        <!-- Konten utama -->
         <tr>
-            <td width="75%">
+            <td width="75%" class="content">
 
                 <h3>Cek Kesehatan Gratis SMKN 1 Tangerang</h3>
 
-                <p align="right">
-                    <small><em>Rabu, 23 September 2026</em></small>
+                <p class="date">
+                    <em>Rabu, 23 September 2026</em>
                 </p>
 
                 <p>
@@ -114,15 +223,17 @@
                 </p>
 
                 <p>
-                    <a href="berita/berita-1.html">Selanjutnya</a>
+                    <a class="read-more" href="berita/berita-1.html">
+                        Selanjutnya →
+                    </a>
                 </p>
 
                 <hr>
 
                 <h3>Prestasi O2SN</h3>
 
-                <p align="right">
-                    <small><em>Senin, 8 Juli 2026</em></small>
+                <p class="date">
+                    <em>Senin, 8 Juli 2026</em>
                 </p>
 
                 <p>
@@ -133,13 +244,16 @@
                 </p>
 
                 <p>
-                    <a href="berita/berita-2.html">Selanjutnya</a>
+                    <a class="read-more" href="berita/berita-2.html">
+                        Selanjutnya →
+                    </a>
                 </p>
 
             </td>
 
-            <td width="25%" valign="top" bgcolor="lightgrey">
-                <p><b>Tautan Eksternal</b></p>
+            <!-- Tautan eksternal -->
+            <td class="sidebar">
+                <h4>♡ Tautan Eksternal</h4>
 
                 <ol>
                     <li>
@@ -148,7 +262,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.github.com">Github</a>
+                        <a href="https://www.github.com">
+                            Github
+                        </a>
                     </li>
                     <li>
                         <a href="https://www.wikipedia.org">
@@ -164,17 +280,16 @@
             </td>
         </tr>
 
+        <!-- Footer -->
         <tr>
-            <td colspan="2" align="right">
+            <td colspan="2" class="footer">
                 <small>
-                    &copy; Copyright Afiqah An, 2026.
+                    © Copyright Afiqah An, 2026. ♡
                 </small>
             </td>
         </tr>
 
     </table>
-
-    <p>&nbsp;</p>
 
 </body>
 </html>
