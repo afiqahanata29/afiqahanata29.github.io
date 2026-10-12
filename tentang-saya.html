@@ -1,23 +1,187 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <meta charset="UTF-8">
     <title>Tentang Saya</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F1F5EC;
+            color: #51464A;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 15px;
+        }
+table {
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(80, 60, 60, 0.12);
+}
+
+td {
+    border: none;
+}
+        /* Header */
+        tr:first-child td {
+            background-color: #F5D5E0;
+            text-align: center;
+            padding: 25px;
+        }
+
+        h1 {
+            color: #704C59;
+            letter-spacing: 2px;
+            text-shadow: 3px 4px 5px rgba(112, 76, 89, 0.25);
+        }
+
+        h1::before {
+            content: "✿ ";
+            color: #8EAF7D;
+        }
+
+        h1::after {
+            content: " ✿";
+            color: #8EAF7D;
+        }
+
+        /* Navigasi */
+        tr:nth-child(2) td {
+            background-color: #D8E8CC;
+            padding: 14px;
+        }
+
+        a {
+            color: #63835D;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #C76F91;
+            text-decoration: underline;
+        }
+
+        /* Konten utama */
+        tr:nth-child(3) td:first-child {
+            background-color: #FFFFFF;
+            padding: 22px;
+            vertical-align: top;
+        }
+
+        h3 {
+            color: #B96F89;
+            text-shadow: 2px 3px 4px rgba(112, 76, 89, 0.2);
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        h3::before {
+            content: "🌿 ❀ 🌸 ✿ 🌷";
+            display: block;
+            font-size: 18px;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        h3::after {
+            content: "❀ · · · · · ❀";
+            display: block;
+            color: #91AD8D;
+            font-size: 15px;
+            margin-top: 8px;
+        }
+
+        p {
+            margin-bottom: 18px;
+        }
+
+        /* Tanggal */
+        small {
+            color: #91858A;
+        }
+
+        /* Sidebar */
+        tr:nth-child(3) td:last-child {
+            background-color: #FBEAF0;
+            padding: 18px;
+            vertical-align: top;
+        }
+
+        tr:nth-child(3) td:last-child p {
+            color: #875268;
+            font-weight: bold;
+        }
+
+        tr:nth-child(3) td:last-child li {
+            margin-bottom: 10px;
+        }
+
+        /* Garis pemisah */
+        hr {
+            border: none;
+            border-top: 2px dashed #E8C5D1;
+        }
+
+        /* Footer */
+        tr:last-child td {
+            background-color: #A7C69A;
+            color: white;
+            padding: 14px;
+            text-align: right;
+        }
+
+        tr:last-child small {
+            color: white;
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 15px 5px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            tr:nth-child(3) td:first-child,
+            tr:nth-child(3) td:last-child {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body bgcolor="darkgrey" background="images/background.svg">
-    <!-- Halaman web tanpa CSS. Murni hanya memakai HTML -->
+
     <p>&nbsp;</p>
-    <table border="1" width="800px" cellpadding="12px" align="center" bgcolor="white">
+
+    <table border="1" width="800px" cellpadding="12px"
+           align="center" bgcolor="white">
+
         <tr>
-            <td colspan="2" align="center" bgcolor="pink" background="images/jaring-teal.svg">
+            <td colspan="2" align="center"
+                bgcolor="pink" background="images/jaring-teal.svg">
                 <font color="black">
                     <p>&nbsp;</p>
                     <h1>Website Afiqah</h1>
-                   
                 </font>
             </td>
         </tr>
+
         <tr>
             <td colspan="2" bgcolor="pink">
                 <a href="index.html">Beranda</a> |
@@ -26,55 +190,87 @@
                 <a href="syair-lagu.html">Syair Lagu</a>
             </td>
         </tr>
+
         <tr>
             <td width="75%">
+
                 <!-- Content utama -->
 
-               <h3 align="center">Tentang Saya</h3>
-                <p align="right"><small><em>Senin, 28 September 2026</em></small></p>
-                <p>Halo. Nama saya Afiqah.<br>
+                <h3 align="center">Tentang Saya</h3>
+
+                <p align="right">
+                    <small><em>Senin, 28 September 2026</em></small>
+                </p>
+
+                <p>Halo. Nama saya Afiqah.</p>
+
                 <p>
-                    Saya murid SMKN 1 Tangerang yang sekarang menjadi murid kelas 11 di jurusan DKV 
+                    Saya murid SMKN 1 Tangerang yang sekarang menjadi
+                    murid kelas 11 di jurusan DKV
                     (Desain Komunikasi Visual).
-                    Hobby saya Melukis, Menggambar, Memasak, Memanggang kue, dan Berenang.
+                    Hobby saya Melukis, Menggambar, Memasak,
+                    Memanggang kue, dan Berenang.
                 </p>
-                
-                
+
                 <p>
-                Saya baru belajar
-                    di bulan juli, awalnya saya tidak suka berenang, karena takut akan tenggelam, tetapi setelah saya
-                    mencoba untuk pertama kali, saya masih merasa takut, tapi 
-                    lama kelamaan saya jadi tidak takut lagi dan sudah menguasai 
-                    beberapa gaya berenang. 
+                    Saya baru belajar di bulan juli, awalnya saya tidak
+                    suka berenang, karena takut akan tenggelam, tetapi
+                    setelah saya mencoba untuk pertama kali, saya masih
+                    merasa takut, tapi lama kelamaan saya jadi tidak
+                    takut lagi dan sudah menguasai beberapa gaya berenang.
                 </p>
-                
-                
+
                 <p>
-                minggu depan saya akan belajar berenang 
-                    gaya kupu-kupu, gaya yang dikatanya sulit itu, semoga saya bisa
-                    lancar mempelajari nya.</p>
-               
-               
-                
+                    minggu depan saya akan belajar berenang gaya
+                    kupu-kupu, gaya yang dikatanya sulit itu, semoga
+                    saya bisa lancar mempelajari nya.
+                </p>
+
                 <!-- Akhir dari content utama -->
+
             </td>
+
             <td width="25%" valign="top" bgcolor="lightgrey">
+
                 <p>Tautan eksternal</p>
+
                 <ol>
-                    <li><a href="https://afiqahanata29.github.io">Website Afiqah</a></li>
-                    <li><a href="https://www.github.com">Github</a></li>
-                    <li><a href="https://www.wikipedia.org">Wikipedia</a></li>
-                    <li><a href="https://www.w3schools.com">W3Schools</a></li>
+                    <li>
+                        <a href="https://afiqahanata29.github.io">
+                            Website Afiqah
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.github.com">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://www.wikipedia.org">
+                            Wikipedia
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com">
+                            W3Schools
+                        </a>
+                    </li>
                 </ol>
+
             </td>
         </tr>
+
         <tr>
             <td colspan="2" align="right" bgcolor="sky blue">
-                <font color="white"><small>&copy; Copyright Afiqah Anata Putri Latiefah, 2026.</small></font>
+                <font color="white">
+                    <small>
+                        &copy; Copyright Afiqah Anata Putri Latiefah, 2026.
+                    </small>
+                </font>
             </td>
         </tr>
-    </table>
-    <p>&nbsp;</p>
-</body>
 
+    </table>
+
+    <p>&nbsp;</p>
+
+</body>
 </html>
