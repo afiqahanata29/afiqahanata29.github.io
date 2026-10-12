@@ -1,23 +1,190 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <title>Beranda</title>
+    <meta charset="UTF-8">
+    <title>Syair Lagu - Blue</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F1F5EC;
+            color: #51464A;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 15px;
+        }
+
+        table {
+            width: 800px;
+            max-width: 100%;
+            margin: auto;
+            border: none !important;
+            border-spacing: 0;
+            border-collapse: separate;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(80, 60, 60, 0.12);
+        }
+
+        td, tr {
+            border: none !important;
+        }
+
+        /* Header */
+        tr:first-child td {
+            background-color: #F5D5E0;
+            text-align: center;
+            padding: 25px;
+        }
+
+        h1 {
+            color: #704C59;
+            letter-spacing: 2px;
+            text-shadow: 3px 4px 5px rgba(112, 76, 89, 0.25);
+        }
+
+        h1::before {
+            content: "✿ ";
+            color: #8EAF7D;
+        }
+
+        h1::after {
+            content: " ✿";
+            color: #8EAF7D;
+        }
+
+        /* Navigasi */
+        tr:nth-child(2) td {
+            background-color: #D8E8CC;
+            padding: 14px;
+        }
+
+        a {
+            color: #63835D;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #C76F91;
+            text-decoration: underline;
+        }
+
+        /* Konten lagu */
+        tr:nth-child(3) td:first-child {
+            background-color: #FFFFFF;
+            padding: 22px;
+            vertical-align: top;
+        }
+
+        h3 {
+            color: #B96F89;
+            text-align: center;
+            text-shadow: 2px 3px 4px rgba(112, 76, 89, 0.2);
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        h3::before {
+            content: "🌿 ❀ 🌸 ✿ 🌷";
+            display: block;
+            font-size: 18px;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        h3::after {
+            content: "❀ · · · · · ❀";
+            display: block;
+            color: #91AD8D;
+            font-size: 15px;
+            margin-top: 8px;
+        }
+
+        /* Gambar lagu */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(80, 60, 60, 0.15);
+        }
+
+        /* Nama penyanyi */
+        .artist {
+            color: #B96F89;
+            font-style: italic;
+            text-align: right;
+        }
+
+        /* Sidebar */
+        tr:nth-child(3) td:last-child {
+            background-color: #FBEAF0;
+            padding: 18px;
+            vertical-align: top;
+        }
+
+        tr:nth-child(3) td:last-child p {
+            color: #875268;
+            font-weight: bold;
+        }
+
+        tr:nth-child(3) td:last-child li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        tr:last-child td {
+            background-color: #A7C69A;
+            color: white;
+            padding: 14px;
+            text-align: right;
+        }
+
+        tr:last-child small {
+            color: white;
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 15px 5px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            tr:nth-child(3) td:first-child,
+            tr:nth-child(3) td:last-child {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body bgcolor="darkgrey" background="images/background.svg">
-    <!-- Halaman web tanpa CSS. Murni hanya memakai HTML -->
+
     <p>&nbsp;</p>
-    <table border="1" width="800px" cellpadding="12px" align="center" bgcolor="white">
+
+    <table border="1" width="800px" cellpadding="12px"
+           align="center" bgcolor="white">
+
         <tr>
-            <td colspan="2" align="center" bgcolor="pink" background="images/jaring-teal.svg">
+            <td colspan="2" align="center"
+                bgcolor="pink" background="images/jaring-teal.svg">
                 <font color="black">
                     <p>&nbsp;</p>
                     <h1>Website Afiqah</h1>
-                    
                 </font>
             </td>
         </tr>
+
         <tr>
             <td colspan="2" bgcolor="pink">
                 <a href="index.html">Beranda</a> |
@@ -26,61 +193,88 @@
                 <a href="syair-lagu.html">Syair Lagu</a>
             </td>
         </tr>
+
         <tr>
             <td width="75%">
+
                 <!-- Content utama -->
 
                 <h3>Blue</h3>
-               
-               <p>
-                Your morning eyes, I could stare like watching stars
-I could walk you by, and I'll tell without a thought
-You'd be mine, would you mind if I took your hand tonight?
-Know you're all that I want this life</p>
-                
-                
+
                 <p>
-                My love will always stay by you
-I'll keep it safe, so don't you worry a thing
-I'll tell you I love you more
-It's stuck with you forever, so promise you won't let it go
-I'll trust the universe will always bring me to you</p>
-                
-                
+                    Your morning eyes, I could stare like watching stars
+                    I could walk you by, and I'll tell without a thought
+                    You'd be mine, would you mind if I took your hand tonight?
+                    Know you're all that I want this life
+                </p>
+
                 <p>
-                I'll imagine we fell in love
-I'll nap under moonlight skies with you
-I think I'll picture us, you with the waves
-The ocean's colors on your face
-I'll leave my heart with your air
-So let me fly with you
-Will you be forever with me?</p>
-                
-<center>
-                <img src="images/blue.jpg" width="400"
-                     </center>
-    
-    <p align="right"><qw    dfssmall><em>yung kai</em></qwsmall></p>
-                     
+                    My love will always stay by you
+                    I'll keep it safe, so don't you worry a thing
+                    I'll tell you I love you more
+                    It's stuck with you forever, so promise you won't let it go
+                    I'll trust the universe will always bring me to you
+                </p>
+
+                <p>
+                    I'll imagine we fell in love
+                    I'll nap under moonlight skies with you
+                    I think I'll picture us, you with the waves
+                    The ocean's colors on your face
+                    I'll leave my heart with your air
+                    So let me fly with you
+                    Will you be forever with me?
+                </p>
+
+                <center>
+                    <img src="images/blue.jpg"
+                         width="400"
+                         alt="Gambar lagu Blue">
+                </center>
+
+                <p class="artist">yung kai</p>
+
                 <!-- Akhir dari content utama -->
+
             </td>
+
             <td width="25%" valign="top" bgcolor="lightgrey">
                 <p>Tautan eksternal</p>
+
                 <ol>
-                    <li><a href="https://afiqahanata29.github.io">Website Afiqah</a></li>
-                    <li><a href="https://www.github.com">Github</a></li>
-                    <li><a href="https://www.wikipedia.org">Wikipedia</a></li>
-                    <li><a href="https://www.w3schools.com">W3Schools</a></li>
+                    <li>
+                        <a href="https://afiqahanata29.github.io">
+                            Website Afiqah
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.github.com">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://www.wikipedia.org">
+                            Wikipedia
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com">
+                            W3Schools
+                        </a>
+                    </li>
                 </ol>
             </td>
         </tr>
+
         <tr>
             <td colspan="2" align="right" bgcolor="sky blue">
-                <font color="white"><small>&copy; Copyright Afiqah An, 2026.</small></font>
+                <font color="white">
+                    <small>&copy; Copyright Afiqah An, 2026.</small>
+                </font>
             </td>
         </tr>
-    </table>
-    <p>&nbsp;</p>
-</body>
 
+    </table>
+
+    <p>&nbsp;</p>
+
+</body>
 </html>
