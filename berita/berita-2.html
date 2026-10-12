@@ -1,256 +1,303 @@
-```html
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prestasi O2SN - Website Afiqah</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" href="../favicon.ico">
 
     <style>
         body {
-            background-color: #F1F5EC;
-            background-image: url("images/background.svg");
             font-family: Arial, sans-serif;
-            color: #51464A;
-            padding: 30px 15px;
+            background-color: #f5f1ed;
+            margin: 0;
+            padding: 40px 15px;
+            color: #51464a;
+            line-height: 1.6;
         }
 
         table {
             width: 800px;
             max-width: 100%;
             margin: auto;
-            background-color: white;
-            border: none !important;
-            border-spacing: 0;
             border-collapse: separate;
-            border-radius: 15px;
+            border-spacing: 0;
+            background-color: white;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(112, 76, 89, 0.15);
-        }
-
-        tr, td {
-            border: none !important;
-        }
-
-        td {
-            padding: 15px;
-        }
-
-        .header {
-            background-color: #F5D5E0;
-            background-image: url("images/jaring-teal.svg");
-            background-size: cover;
-            background-position: center;
-            padding: 30px 15px;
+            box-shadow: 0 6px 20px rgba(112, 76, 89, 0.18);
         }
 
         h1 {
             color: #704C59;
-            text-shadow: 3px 3px 5px rgba(112, 76, 89, 0.25);
-            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px #e8b9c9;
+            letter-spacing: 1px;
         }
 
-        .flower {
-            color: #B96F89;
-            font-size: 20px;
-            letter-spacing: 8px;
-        }
-
-        .navigation {
-            background-color: #D8E8CC;
-            text-align: center;
-        }
-
-        .navigation a {
-            color: #63835D;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 7px;
-        }
-
-        .navigation a:hover {
-            color: #C76F91;
-            text-shadow: 1px 1px 3px #F5D5E0;
-        }
-
-        .content {
-            background-color: #FFFFFF;
-            line-height: 1.8;
-            vertical-align: top;
+        h1::before,
+        h1::after {
+            content: " ✿ ";
+            color: #A7C69A;
         }
 
         h3 {
-            color: #B96F89;
+            position: relative;
+            margin-top: 35px;
+            color: #b45f7c;
+            font-size: 19px;
             text-align: center;
-            line-height: 1.5;
         }
 
-        .date {
-            text-align: right;
-            color: #8A7A80;
+        h3::before {
+            content: "🌿  ✿  ❀  🌸  ❀  🌿";
+            display: block;
+            font-size: 20px;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        h3::after {
+            content: " ✿";
+            color: #A7C69A;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #bd6486;
+        }
+
+        .header {
+            background-color: #f3c6d4;
+            color: #704653;
+            text-align: center;
+            height: 170px;
+            padding: 0;
+        }
+
+        .header h1 {
+            font-size: 30px;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .navbar {
+            background-color: #c8dfb9;
+            text-align: center;
+            padding: 12px;
             font-size: 13px;
         }
 
-        .news-image {
-            display: block;
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            margin: 20px auto;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(112, 76, 89, 0.15);
+        .navbar a {
+            color: #466044;
+            margin: 0 8px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #bd6486;
+        }
+
+        .content {
+            width: 75%;
+            padding: 22px;
+            vertical-align: top;
+            background-color: white;
+            box-sizing: border-box;
+        }
+
+        .content h3 {
+            margin-top: 0;
+        }
+
+        .date {
+            color: #99908e;
+            font-size: 12px;
+            text-align: right;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #eadfe2;
+            margin: 22px 0;
         }
 
         .sidebar {
             width: 25%;
-            background-color: #FBEAF0;
+            padding: 18px;
+            background-color: #f6dce5;
             vertical-align: top;
+            font-size: 12px;
+            box-sizing: border-box;
         }
 
         .sidebar h4 {
-            color: #B96F89;
-            text-align: center;
+            color: #875268;
         }
 
         .sidebar a {
-            color: #63835D;
-            text-decoration: none;
+            color: #55744e;
         }
 
         .sidebar a:hover {
-            color: #C76F91;
+            color: #bd6486;
         }
 
         .footer {
-            background-color: #A7C69A;
+            background-color: #9fbd8d;
             color: white;
-            text-align: right;
-            padding: 15px;
+            text-align: center;
+            padding: 12px;
+            font-size: 12px;
+        }
+
+        .gambar-berita {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 15px auto;
+            border-radius: 8px;
         }
 
         @media screen and (max-width: 600px) {
             body {
-                padding: 10px 5px;
+                padding: 15px 5px;
             }
 
-            td {
+            .header {
+                height: 130px;
+            }
+
+            .header h1 {
+                font-size: 23px;
+            }
+
+            .content,
+            .sidebar {
                 padding: 10px;
             }
 
-            .navigation a {
-                display: inline-block;
-                margin: 5px;
+            h3 {
+                font-size: 16px;
+            }
+
+            .navbar {
+                line-height: 2;
             }
         }
     </style>
 </head>
 
 <body>
-    <table>
-        <tr>
-            <td colspan="2" class="header" align="center">
-                <div class="flower">✿ ❀ 🌸 ❀ ✿</div>
-                <h1>Website Afiqah</h1>
-                <div class="flower">❀ · · · · · ❀</div>
-            </td>
-        </tr>
 
-        <tr>
-            <td colspan="2" class="navigation">
-                <a href="index.html">Beranda</a> |
-                <a href="tentang-saya.html">Tentang Saya</a> |
-                <a href="sekolah-ku.html">Sekolahku</a> |
-                <a href="syair-lagu.html">Syair Lagu</a>
-            </td>
-        </tr>
+<table>
+    <tr>
+        <td colspan="2" class="header">
+            <h1>Website Afiqah</h1>
+            <p>Berbagi Cerita dan Informasi</p>
+        </td>
+    </tr>
 
-        <tr>
-            <td width="75%" class="content">
-                <h3>🌿 ❀ Prestasi O2SN SMKN 1 Tangerang ❀ 🌿</h3>
+    <tr>
+        <td colspan="2" class="navbar">
+            <a href="../index.html">Beranda</a> |
+            <a href="../tentang-saya.html">Tentang Saya</a> |
+            <a href="../sekolah-ku.html">Sekolahku</a> |
+            <a href="../syair-lagu.html">Syair Lagu</a>
+        </td>
+    </tr>
 
-                <p class="date">
-                    <small><em>Senin, 28 September 2026</em></small>
-                </p>
+    <tr>
+        <td class="content">
+            <h3>Prestasi O2SN Kota Tangerang 2026</h3>
 
-                <p>
-                    SMKN 1 Tangerang Borong Prestasi di O2SN Kota Tangerang 2026!
-                    Alhamdulillah, kabar membanggakan kembali datang dari
-                    siswa-siswi SMKN 1 Tangerang yang berhasil mengharumkan nama
-                    sekolah pada ajang Olimpiade Olahraga Siswa Nasional (O2SN)
-                    Kota Tangerang Tahun 2026.
-                </p>
+            <p class="date">Senin, 28 September 2026</p>
 
-                <p>
-                    Dengan semangat juang, kerja keras, dan sportivitas yang
-                    tinggi, para peserta berhasil meraih prestasi sebagai berikut:
-                </p>
+            <hr>
 
-                <p>
-                    🥇 <strong>Juara 1 (Medali Emas)</strong><br>
-                    Naufal Mumtaz Adz Dzaki (XI TKL) – Pencak Silat Putra
-                </p>
+            <img
+                src="../images/o2sn.jpg"
+                alt="Prestasi siswa SMKN 1 Tangerang dalam O2SN 2026"
+                class="gambar-berita"
+            >
 
-                <p>
-                    🥈 <strong>Juara 2 (Medali Perak)</strong><br>
-                    Rizky Ramandha (XII TKJ 2) – Bulutangkis Putra<br>
-                    Tim Voli Putra
-                </p>
+            <p><strong>SMKN 1 Tangerang Borong Prestasi di O2SN Kota Tangerang 2026!</strong></p>
 
-                <p>
-                    🥉 <strong>Juara 3 (Medali Perunggu)</strong><br>
-                    Siluet Jingga Jifi (XII DKV 1) – Pencak Silat Putri<br>
-                    Tim Futsal Putra
-                </p>
+            <p>
+                Alhamdulillah, kabar membanggakan kembali datang dari siswa-siswi
+                SMKN 1 Tangerang yang berhasil mengharumkan nama sekolah pada ajang
+                Olimpiade Olahraga Siswa Nasional (O2SN) Kota Tangerang Tahun 2026.
+                Dengan semangat juang, kerja keras, dan sportivitas yang tinggi,
+                para peserta berhasil meraih prestasi sebagai berikut:
+            </p>
 
-                <p>
-                    Prestasi ini merupakan buah dari kerja keras para siswa,
-                    dedikasi para pelatih dan guru pembimbing, serta dukungan
-                    penuh dari seluruh keluarga besar SMKN 1 Tangerang.
-                </p>
+            <p>
+                <strong>Juara 1 (Medali Emas)</strong><br>
+                Naufal Mumtaz Adz Dzaki (XI TKL) – Pencak Silat Putra
+            </p>
 
-                <p>
-                    Selamat kepada seluruh peraih prestasi! Semoga capaian ini
-                    menjadi motivasi untuk terus berlatih, berprestasi, dan
-                    menginspirasi siswa lainnya. Bagi para juara yang akan
-                    melanjutkan ke tingkat berikutnya, semoga diberikan
-                    kemudahan dan mampu mengharumkan nama Kota Tangerang
-                    serta Provinsi Banten.
-                </p>
+            <p>
+                <strong>Juara 2 (Medali Perak)</strong><br>
+                Rizky Ramandha (XII TKJ 2) – Bulutangkis Putra<br>
+                Tim Voli Putra
+            </p>
 
-                <p>
-                    <strong>
-                        SMKN 1 Tangerang, terus melahirkan generasi yang
-                        kompeten, berkarakter, dan berprestasi!
-                    </strong>
-                </p>
+            <p>
+                <strong>Juara 3 (Medali Perunggu)</strong><br>
+                Siluet Jingga Jifi (XII DKV 1) – Pencak Silat Putri<br>
+                Tim Futsal Putra
+            </p>
 
-                <img
-                    src="images/o2sn.jpg"
-                    alt="Prestasi siswa SMKN 1 Tangerang dalam ajang O2SN"
-                    class="news-image"
-                >
-            </td>
+            <p>
+                Prestasi ini merupakan buah dari kerja keras para siswa, dedikasi
+                para pelatih dan guru pembimbing, serta dukungan penuh dari seluruh
+                keluarga besar SMKN 1 Tangerang.
+            </p>
 
-            <td class="sidebar">
-                <h4>🌸 Tautan Eksternal 🌸</h4>
-                <ol>
-                    <li><a href="https://afiqahanata29.github.io">Website Afiqah</a></li>
-                    <li><a href="https://www.github.com">Github</a></li>
-                    <li><a href="https://www.wikipedia.org">Wikipedia</a></li>
-                    <li><a href="https://www.w3schools.com">W3Schools</a></li>
-                </ol>
-            </td>
-        </tr>
+            <p>
+                Selamat kepada seluruh peraih prestasi! Semoga capaian ini menjadi
+                motivasi untuk terus berlatih, berprestasi, dan menginspirasi siswa
+                lainnya. Bagi para juara yang akan melanjutkan ke tingkat berikutnya,
+                semoga diberikan kemudahan dan mampu mengharumkan nama Kota Tangerang
+                serta Provinsi Banten.
+            </p>
 
-        <tr>
-            <td colspan="2" class="footer">
-                <small>
-                    &copy; Copyright Afiqah Anata Putri Latiefah, 2026.
-                </small>
-            </td>
-        </tr>
-    </table>
+            <p>
+                <strong>
+                    SMKN 1 Tangerang, terus melahirkan generasi yang kompeten,
+                    berkarakter, dan berprestasi!
+                </strong>
+            </p>
+        </td>
+
+        <td class="sidebar">
+            <h4>Menu Lainnya</h4>
+            <hr>
+
+            <p><a href="../index.html">Beranda</a></p>
+            <p><a href="../tentang-saya.html">Tentang Saya</a></p>
+            <p><a href="../sekolah-ku.html">Sekolahku</a></p>
+            <p><a href="../syair-lagu.html">Syair Lagu</a></p>
+
+            <hr>
+
+            <h4>Berita Lainnya</h4>
+
+            <p><a href="berita-1.html">Cek Kesehatan Gratis (CKG)</a></p>
+            <p><a href="berita-2.html">Prestasi O2SN 2026</a></p>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" class="footer">
+            © 2026 Website Afiqah | Dibuat dengan HTML
+        </td>
+    </tr>
+</table>
+
 </body>
 </html>
-```
