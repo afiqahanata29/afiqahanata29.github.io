@@ -1,61 +1,328 @@
-
+<!DOCTYPE html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #F1F5EC;
-            color: #554B4E;
+            background-color: #f5f1ed;
+            margin: 0;
+            padding: 40px 15px;
+            color: #51464a;
             line-height: 1.6;
         }
 
         table {
+            width: 800px;
+            max-width: 100%;
+            margin: auto;
+            border: none;
+            border-spacing: 0;
+            background-color: white;
             border-radius: 12px;
             overflow: hidden;
-            border-spacing: 0;
-            box-shadow: 0 5px 18px rgba(100, 120, 90, 0.15);
+            box-shadow: 0 5px 20px rgba(80, 60, 60, 0.12);
+        }
+        
+        /* Hiasan header */
+tr:first-child td {
+    position: relative;
+    background-color: #F5D5E0;
+    box-shadow: inset 0 -5px 15px rgba(180, 110, 140, 0.10);
+}
+
+/* Bayangan pada judul */
+h1 {
+    color: #704C59;
+    text-shadow: 3px 4px 5px rgba(112, 76, 89, 0.25);
+    letter-spacing: 2px;
+}
+
+/* Hiasan kecil di judul */
+h1::before {
+    content: "✿ ";
+    color: #8EAF7D;
+}
+
+h1::after {
+    content: " ✿";
+    color: #8EAF7D;
+}
+
+/* Bayangan dan sudut tabel */
+table {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(112, 76, 89, 0.18);
+}
+
+/* Hiasan pemisah berita */
+hr {
+    border: none;
+    border-top: 2px dashed #E8C5D1;
+    margin: 25px 0;
+}
+
+/* Efek tombol tautan */
+a:hover {
+    color: #C76F91;
+    text-decoration: underline;
+}
+
+        td {
+            border: none;
         }
 
-        h1 {
-            color: #704C59;
+        /* Header */
+        .header {
+            height: 170px;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #f3c6d4;
+            color: #704653;
+        }
+
+        .header h1 {
+            font-size: 30px;
+            margin: 0;
             letter-spacing: 1px;
         }
 
-        h3 {
-            color: #B96F89;
+        .header p {
+            font-size: 13px;
+            margin-top: 5px;
         }
 
-        a {
-            color: #63835D;
+        /* Menu navigasi */
+        .navbar {
+            background-color: #c8dfb9;
+            padding: 12px;
+            font-size: 13px;
+        }
+
+        .navbar a {
+            color: #466044;
             text-decoration: none;
+            font-weight: bold;
+            margin-right: 5px;
         }
 
-        a:hover {
-            color: #C76F91;
+        .navbar a:hover {
+            color: #bd6486;
+            text-decoration: underline;
+        }
+
+        /* Konten berita */
+        .content {
+            width: 75%;
+            padding: 22px;
+            vertical-align: top;
+            background-color: #ffffff;
+        }
+
+        .content h3 {
+            color: #b45f7c;
+            font-size: 19px;
+            margin-top: 0;
+        }
+
+        .date {
+            color: #99908e;
+            font-size: 12px;
+            text-align: right;
+        }
+
+        .read-more {
+            color: #63845c;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            color: #c76c8e;
             text-decoration: underline;
         }
 
         hr {
             border: none;
-            border-top: 1px solid #E8D9DD;
+            border-top: 1px solid #eadfe2;
+            margin: 22px 0;
         }
 
-        tr:first-child td {
-            background-color: #F5D5E0;
+        /* Sidebar */
+        .sidebar {
+            width: 25%;
+            padding: 18px;
+            vertical-align: top;
+            background-color: #f6dce5;
+            font-size: 12px;
         }
 
-        tr:nth-child(2) td {
-            background-color: #D8E8CC;
+        .sidebar h4 {
+            color: #875268;
+            margin-top: 0;
+            font-size: 14px;
         }
 
-        tr:nth-child(3) td:last-child {
-            background-color: #FBEAF0;
+        .sidebar ol {
+            padding-left: 18px;
         }
 
-        tr:last-child td {
-            background-color: #A7C69A;
+        .sidebar li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar a {
+            color: #55744e;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            color: #b45f7c;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #9fbd8d;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 15px 5px;
+            }
+
+            .header {
+                height: 130px;
+            }
+
+            .header h1 {
+                font-size: 23px;
+            }
+
+            .content,
+            .sidebar {
+                padding: 10px;
+            }
+
+            .content h3 {
+                font-size: 16px;
+            }
+
+            .navbar {
+                line-height: 2;
+            }
         }
     </style>
 </head>
+
+<body>
+
+    <table cellpadding="0">
+
+        <tr>
+            <td colspan="2" class="header">
+                <h1 class="header-tittle">Website Afiqah</h1>
+         
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="navbar">
+                <a href="index.html">Beranda</a> |
+                <a href="tentang-saya.html">Tentang Saya</a> |
+                <a href="sekolah-ku.html">Sekolahku</a> |
+                <a href="syair-lagu.html">Syair Lagu</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="content">
+
+                <h3>Cek Kesehatan Gratis SMKN 1 Tangerang</h3>
+
+                <p class="date">
+                    <em>Rabu, 23 September 2026</em>
+                </p>
+
+                <p>
+                    SMKN 1 Tangerang bekerja sama dengan Pukesmas
+                    Sukasari melaksanakan cek kesehatan gratis (CKG)
+                    bagi seluruh siswa kelas X sebanyak 14 kelas.
+                </p>
+
+                <p>
+                    <a class="read-more" href="berita/berita-1.html">
+                        Selanjutnya
+                    </a>
+                </p>
+
+                <hr>
+
+                <h3>Prestasi O2SN</h3>
+
+                <p class="date">
+                    <em>Senin, 8 Juli 2026</em>
+                </p>
+
+                <p>
+                    Kabar membanggakan kembali datang dari siswa-siswi
+                    SMKN 1 Tangerang yang berhasil mengharumkan nama
+                    sekolah pada ajang Olimpiade Olahraga Siswa Nasional
+                    (O2SN) Kota Tangerang Tahun 2026.
+                </p>
+
+                <p>
+                    <a class="read-more" href="berita/berita-2.html">
+                        Selanjutnya
+                    </a>
+                </p>
+
+            </td>
+
+            <td class="sidebar">
+                <h4>Tautan Eksternal</h4>
+
+                <ol>
+                    <li>
+                        <a href="https://afiqahanata29.github.io">
+                            Website Afiqah
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.github.com">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://www.wikipedia.org">
+                            Wikipedia
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com">
+                            W3Schools
+                        </a>
+                    </li>
+                </ol>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="footer">
+                &copy; Copyright Afiqah Anata Putri Latiefah, 2026.
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
+
