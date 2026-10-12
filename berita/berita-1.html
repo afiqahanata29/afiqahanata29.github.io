@@ -1,60 +1,215 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <title>Tentang Saya</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Kesehatan Gratis - Website Afiqah</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <style>
+        body {
+            background-color: #F1F5EC;
+            background-image: url("images/background.svg");
+            background-repeat: repeat;
+            font-family: Arial, sans-serif;
+            color: #51464A;
+            padding: 30px 15px;
+        }
+
+        table {
+            width: 800px;
+            max-width: 100%;
+            margin: auto;
+            background-color: white;
+            border: none !important;
+            border-spacing: 0;
+            border-collapse: separate;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(112, 76, 89, 0.15);
+        }
+
+        tr, td {
+            border: none !important;
+        }
+
+        td {
+            padding: 15px;
+        }
+
+        /* Header */
+        .header {
+            background-color: #F5D5E0;
+            background-image: url("images/jaring-teal.svg");
+            background-size: cover;
+            background-position: center;
+            padding: 30px 15px;
+        }
+
+        h1 {
+            color: #704C59;
+            text-shadow: 3px 3px 5px rgba(112, 76, 89, 0.25);
+            letter-spacing: 2px;
+        }
+
+        .flower {
+            color: #B96F89;
+            font-size: 20px;
+            letter-spacing: 8px;
+        }
+
+        /* Navigasi */
+        .navigation {
+            background-color: #D8E8CC;
+            text-align: center;
+        }
+
+        .navigation a {
+            color: #63835D;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 7px;
+            transition: 0.3s;
+        }
+
+        .navigation a:hover {
+            color: #C76F91;
+            text-shadow: 1px 1px 3px #F5D5E0;
+        }
+
+        /* Berita */
+        .content {
+            background-color: #FFFFFF;
+            line-height: 1.8;
+            vertical-align: top;
+        }
+
+        h3 {
+            color: #B96F89;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .date {
+            text-align: right;
+            color: #8A7A80;
+            font-size: 13px;
+        }
+
+        .news-image {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(112, 76, 89, 0.15);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 25%;
+            background-color: #FBEAF0;
+            vertical-align: top;
+        }
+
+        .sidebar h4 {
+            color: #B96F89;
+            text-align: center;
+        }
+
+        .sidebar a {
+            color: #63835D;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            color: #C76F91;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #A7C69A;
+            color: white;
+            text-align: right;
+            padding: 15px;
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 10px 5px;
+            }
+
+            td {
+                padding: 10px;
+            }
+
+            .sidebar {
+                width: 30%;
+            }
+
+            .navigation a {
+                display: inline-block;
+                margin: 5px;
+            }
+        }
+    </style>
 </head>
 
-<body bgcolor="darkgrey" background="images/background.svg">
-    <!-- Halaman web tanpa CSS. Murni hanya memakai HTML -->
-    <p>&nbsp;</p>
-    <table border="1" width="800px" cellpadding="12px" align="center" bgcolor="white">
+<body>
+    <table>
         <tr>
-            <td colspan="2" align="center" bgcolor="pink" background="images/jaring-teal.svg">
-                <font color="black">
-                    <p>&nbsp;</p>
-                    <h1>Website Afiqah</h1>
-                   
-                </font>
+            <td colspan="2" class="header" align="center">
+                <div class="flower">✿ ❀ 🌸 ❀ ✿</div>
+                <h1>Website Afiqah</h1>
+                <div class="flower">❀ · · · · · ❀</div>
             </td>
         </tr>
-        <tr>
-            <td colspan="2" bgcolor="pink">
-                <a href="../">Beranda</a> |
-                <a href="../tentang-saya.html">Tentang Saya</a> |
-                <a href="../sekolah-ku.html">Sekolahku</a> |
-                <a href="../syair-lagu.html">Syair Lagu</a>
-            </td>
-        </tr>
-        <tr>
-            <td width="75%">
-                <!-- Content utama -->
 
-               <h3 align="center">Cek Kesehatan Gratis di SMKN 1 Tangerang</h3>
-                <p align="right"><small><em>Rabu, 23 September 2026</em></small></p>
-                
-              <p>
-            Rabu, 23 September 2026, SMKN 1 Tangerang bekerja sama dengan Pukesmas sukasari
-                  untuk melaksanakan Cek Kesehatan Gratis (CKG) bagi siswa kelas 10 sebanyak 14 kelas, serta guru dan
-                  tenaga kependidikan.
-                </p>
-                
-                <p>
-                Kegiatan ini menjadi bagian dari upaya bersama untuk menjaga kesehatan dan
-                mendukung kesiapan warga sekolah dalam belajar dan bekerja.
-                </p>
-               
-                <p>
-                Sehat bersama, Belajar lebih nyaman, Bekerja lebih optimal!
-                </p>
-                
-                <center>
-                <img src="../images/ckg.jpg" width="400"
-                </center>
-                <!-- Akhir dari content utama -->
+        <tr>
+            <td colspan="2" class="navigation">
+                <a href="index.html">Beranda</a> |
+                <a href="tentang-saya.html">Tentang Saya</a> |
+                <a href="sekolah-ku.html">Sekolahku</a> |
+                <a href="syair-lagu.html">Syair Lagu</a>
             </td>
-            <td width="25%" valign="top" bgcolor="lightgrey">
-                <p>Tautan eksternal</p>
+        </tr>
+
+        <tr>
+            <td width="75%" class="content">
+                <h3>🌿 ❀ Cek Kesehatan Gratis di SMKN 1 Tangerang ❀ 🌿</h3>
+
+                <p class="date">
+                    <small><em>Rabu, 23 September 2026</em></small>
+                </p>
+
+                <p>
+                    Rabu, 23 September 2026, SMKN 1 Tangerang bekerja sama dengan
+                    Pukesmas sukasari untuk melaksanakan Cek Kesehatan Gratis (CKG)
+                    bagi siswa kelas 10 sebanyak 14 kelas, serta guru dan tenaga
+                    kependidikan.
+                </p>
+
+                <p>
+                    Kegiatan ini menjadi bagian dari upaya bersama untuk menjaga
+                    kesehatan dan mendukung kesiapan warga sekolah dalam belajar
+                    dan bekerja.
+                </p>
+
+                <p>
+                    Sehat bersama, Belajar lebih nyaman, Bekerja lebih optimal!
+                </p>
+
+                <img
+                    src="images/ckg.jpg"
+                    alt="Kegiatan Cek Kesehatan Gratis di SMKN 1 Tangerang"
+                    class="news-image"
+                >
+            </td>
+
+            <td class="sidebar">
+                <h4>🌸 Tautan Eksternal 🌸</h4>
                 <ol>
                     <li><a href="https://afiqahanata29.github.io">Website Afiqah</a></li>
                     <li><a href="https://www.github.com">Github</a></li>
@@ -63,14 +218,13 @@
                 </ol>
             </td>
         </tr>
+
         <tr>
-            <td colspan="2" align="right" bgcolor="sky blue">
-                <font color="white"><small>&copy; Copyright Afiqah Anata Putri Latiefah, 2026.</small></font>
+            <td colspan="2" class="footer">
+                <small>&copy; Copyright Afiqah Anata Putri Latiefah, 2026.</small>
             </td>
         </tr>
     </table>
-    <p>&nbsp;</p>
 </body>
-
 </html>
-             
+```
