@@ -7,140 +7,90 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <style>
-        body {
-           font-family: Arial, sans-serif;
-
-    background-color: #f5f1ed;
-    background-image: url("image/background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-
-    margin: 0;
-    padding: 40px 15px;
-    color: #51464a;
-    line-height: 1.6;
+        * {
+            box-sizing: border-box;
         }
 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5d5e0;
+            margin: 0;
+            padding: 40px 15px;
+            color: #51464a;
+            line-height: 1.6;
+        }
+
+        /* Kotak utama website */
         table {
             width: 800px;
             max-width: 100%;
-            margin: auto;
+            margin: 0 auto;
+            background-color: #fffdfb;
             border: none;
+            border-collapse: separate;
             border-spacing: 0;
-            background-color: white;
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(80, 60, 60, 0.12);
+            box-shadow: 0 6px 20px rgba(112, 76, 89, 0.18);
         }
-        
-        /* Hiasan header */
-tr:first-child td {
-    position: relative;
-    background-color: #F5D5E0;
-    box-shadow: inset 0 -5px 15px rgba(180, 110, 140, 0.10);
-}
-        
-        
-/* Bunga merambat di atas judul berita */
-h3 {
-    position: relative;
-    margin-top: 35px;
-}
-
-/* Ranting bunga dekoratif */
-h3::before {
-    content: "🌿  ✿  ❀  🌸  ❀  🌿";
-    display: block;
-    font-size: 20px;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-    opacity: 0.9;
-}
-
-/* Bunga kecil di ujung judul */
-h3::after {
-    content: " ✿";
-    color: #A7C69A;
-    font-size: 16px;
-}
-
-
-/* Bayangan pada judul */
-h1 {
-    color: #704C59;
-    text-shadow: 3px 4px 5px rgba(112, 76, 89, 0.25);
-    letter-spacing: 2px;
-}
-
-/* Hiasan kecil di judul */
-h1::before {
-    content: "✿ ";
-    color: #8EAF7D;
-}
-
-h1::after {
-    content: " ✿";
-    color: #8EAF7D;
-}
-
-/* Bayangan dan sudut tabel */
-table {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(112, 76, 89, 0.18);
-}
-
-/* Hiasan pemisah berita */
-hr {
-    border: none;
-    border-top: 2px dashed #E8C5D1;
-    margin: 25px 0;
-}
-
-/* Efek tombol tautan */
-a:hover {
-    color: #C76F91;
-    text-decoration: underline;
-}
 
         td {
             border: none;
         }
 
-        /* Header */
+        /* HEADER FOTO WEBSITE AFIQAH */
         .header {
             height: 170px;
+            padding: 25px 15px;
             text-align: center;
             vertical-align: middle;
-            background-color: #f3c6d4;
+
+            background-image:
+                linear-gradient(
+                    rgba(245, 213, 224, 0.18),
+                    rgba(245, 213, 224, 0.18)
+                ),
+                url("images/background.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
             color: #704653;
         }
 
         .header h1 {
+            color: #704c59;
             font-size: 30px;
             margin: 0;
             letter-spacing: 1px;
+            text-shadow: 3px 4px 5px rgba(112, 76, 89, 0.35);
         }
 
-        .header p {
-            font-size: 13px;
-            margin-top: 5px;
+        .header h1::before {
+            content: "✿ ";
+            color: #8eaf7d;
+        }
+
+        .header h1::after {
+            content: " ✿";
+            color: #8eaf7d;
         }
 
         /* Menu navigasi */
         .navbar {
             background-color: #c8dfb9;
             padding: 12px;
-            font-size: 13px;
+            text-align: center;
+            font-size: 14px;
         }
 
         .navbar a {
+            display: inline-block;
             color: #466044;
             text-decoration: none;
             font-weight: bold;
-            margin-right: 5px;
+            margin: 3px 5px;
         }
 
         .navbar a:hover {
@@ -153,13 +103,30 @@ a:hover {
             width: 75%;
             padding: 22px;
             vertical-align: top;
-            background-color: #ffffff;
+            background-color: #fffdfb;
         }
 
         .content h3 {
             color: #b45f7c;
             font-size: 19px;
-            margin-top: 0;
+            margin-top: 15px;
+            position: relative;
+        }
+
+        /* Hiasan bunga di atas judul berita */
+        .content h3::before {
+            content: "🌿  ✿  ❀  🌸  ❀  🌿";
+            display: block;
+            font-size: 20px;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .content h3::after {
+            content: " ✿";
+            color: #a7c69a;
+            font-size: 16px;
         }
 
         .date {
@@ -168,22 +135,38 @@ a:hover {
             text-align: right;
         }
 
-        .read-more {
-            color: #63845c;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: bold;
-        }
+        
+/* Tombol Selanjutnya */
+.read-more {
+    display: inline-block;
+    background-color: #e5a6bb;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
 
-        .read-more:hover {
-            color: #c76c8e;
-            text-decoration: underline;
-        }
+    padding: 9px 18px;
+    border-radius: 8px;
+    margin-top: 5px;
+
+    box-shadow: 0 3px 8px rgba(180, 95, 124, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Efek saat mouse diarahkan ke tombol */
+.read-more:hover {
+    background-color: #a95775;
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(180, 95, 124, 0.3);
+}
+
 
         hr {
             border: none;
-            border-top: 1px solid #eadfe2;
-            margin: 22px 0;
+            border-top: 1px dashed #e8c5d1;
+            margin: 25px 0;
         }
 
         /* Sidebar */
@@ -192,13 +175,13 @@ a:hover {
             padding: 18px;
             vertical-align: top;
             background-color: #f6dce5;
-            font-size: 12px;
+            font-size: 13px;
         }
 
         .sidebar h4 {
             color: #875268;
             margin-top: 0;
-            font-size: 14px;
+            font-size: 16px;
         }
 
         .sidebar ol {
@@ -228,6 +211,7 @@ a:hover {
             font-size: 12px;
         }
 
+        /* Tampilan HP */
         @media screen and (max-width: 600px) {
             body {
                 padding: 15px 5px;
@@ -258,13 +242,10 @@ a:hover {
 </head>
 
 <body>
-
     <table cellpadding="0">
-
         <tr>
             <td colspan="2" class="header">
-                <h1 class="header-tittle">Website Afiqah</h1>
-         
+                <h1>Website Afiqah</h1>
             </td>
         </tr>
 
@@ -279,7 +260,6 @@ a:hover {
 
         <tr>
             <td class="content">
-
                 <h3>Cek Kesehatan Gratis SMKN 1 Tangerang</h3>
 
                 <p class="date">
@@ -318,7 +298,6 @@ a:hover {
                         Selanjutnya
                     </a>
                 </p>
-
             </td>
 
             <td class="sidebar">
@@ -352,9 +331,7 @@ a:hover {
                 &copy; Copyright Afiqah Anata Putri Latiefah, 2026.
             </td>
         </tr>
-
     </table>
-
 </body>
 </html>
-
+```
